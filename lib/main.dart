@@ -97,11 +97,12 @@ class _AddressFormatterState extends State<AddressFormatter> {
     }
 
     final formatted = '''
-Order  Size  -  Version - Name:  Number:  
+Order  Size  -  Version - Name:  Number:
 Adress:
 Name: $name
 Adress Bar: $addressBar
 City: $city
+
 State: $state
 Country: ${_toFullCountryName(country)}
 Postal Code: $postalCode
@@ -132,6 +133,11 @@ Phone: $phone
     );
   }
 
+  void _clearInput() {
+    _inputController.clear();
+    _outputController.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     final isWide = MediaQuery.of(context).size.width > 800;
@@ -160,15 +166,21 @@ Phone: $phone
           Row(
             children: [
               ElevatedButton.icon(
+                onPressed: _clearInput,
+                icon: Icon(Icons.delete),
+                label: Text('Borrar entrada'),
+              ),
+              SizedBox(width: 20),
+              ElevatedButton.icon(
                 onPressed: _formatText,
                 icon: Icon(Icons.check),
-                label: Text('Formatear dirección'),
+                label: Text('Cambiar formato de dirección'),
               ),
-              SizedBox(width: 10),
+              SizedBox(width: 350),
               ElevatedButton.icon(
                 onPressed: _copyToClipboard,
                 icon: Icon(Icons.copy),
-                label: Text('Copiar resultado'),
+                label: Text('Copiar dirección formateda'),
               ),
             ],
           )
@@ -188,7 +200,7 @@ Phone: $phone
             child: TextField(
               controller: _inputController,
               decoration: InputDecoration(
-                hintText: 'Pega aquí la dirección original...',
+                hintText: 'Pegar aquí la dirección original...',
                 border: OutlineInputBorder(),
               ),
               maxLines: null,
