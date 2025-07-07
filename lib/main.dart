@@ -120,6 +120,14 @@ Phone: $phone
         return 'MEXICO';
       case 'US':
         return 'USA';
+      case 'ES':
+        return 'SPAIN';
+      case 'CO':
+        return 'COLOMBIA';
+      case 'AR':
+        return 'ARGENTINA';
+      case 'PE':
+        return 'PERU';
       default:
         return short.toUpperCase();
     }
