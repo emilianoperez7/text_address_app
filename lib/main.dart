@@ -102,7 +102,6 @@ Adress:
 Name: $name
 Adress Bar: $addressBar
 City: $city
-
 State: $state
 Country: ${_toFullCountryName(country)}
 Postal Code: $postalCode
