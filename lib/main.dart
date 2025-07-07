@@ -17,7 +17,7 @@ class AddressFormatterApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Conversor de Dirección'),
+          title: Text('Conversor de Formato de Dirección'),
           centerTitle: true,
         ),
         body: AddressFormatter(),
