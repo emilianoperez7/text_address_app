@@ -69314,7 +69314,7 @@ if(n.length!==0)b+=" Dpto: "+n
 if(k.length!==0)b+=" Col. "+k
 if(m.length!==0)b+=" entre "+m
 if(l.length!==0)b+=" Ref: "+l
-a.ae(new A.a4n(a,"Order  Size  -  Version - Name:  Number:\nAdress:\nName: "+r+"\nAdress Bar: "+b+"\nCity: "+i+"\n\nState: "+h+"\nCountry: "+a.a5_(g)+"\nPostal Code: "+j+"\nPhone: "+q+"\n"))},
+a.ae(new A.a4n(a,"Order  Size  -  Version - Name:  Number:\nAdress:\nName: "+r+"\nAdress Bar: "+b+"\nCity: "+i+"\nState: "+h+"\nCountry: "+a.a5_(g)+"\nPostal Code: "+j+"\nPhone: "+q+"\n"))},
 a5_(a){switch(a.toUpperCase()){case"MX":return"MEXICO"
 case"US":return"USA"
 case"ES":return"SPAIN"
